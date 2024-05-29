@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-public class Bank
+﻿public class Bank
 {
     public List<Client> Clients { get; set; }
 

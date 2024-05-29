@@ -1,0 +1,12 @@
+﻿<Window x:Class="BankApp.NewClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новый клиент" Height="200" Width="400">
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Введите имя клиента:" Margin="0,0,0,10"/>
+            <TextBox x:Name="NewClientNameTextBox" Width="200" Margin="0,0,0,10"/>
+            <Button Content="Сохранить" Click="SaveClient_Click" Width="200"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wpf_Bank_A_12")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cb5f5097d639c8505441c06226cd0759f9f0dd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71fe01c87e33b6a3bd8bb4aa70b5ec891b419d82")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wpf_Bank_A_12")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wpf_Bank_A_12")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

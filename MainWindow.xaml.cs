@@ -1,54 +1,46 @@
-﻿using System;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace BankApp
 {
     public partial class MainWindow : Window
     {
-        private Bank bank = new Bank();
+        private List<string> clients;
+
         public MainWindow()
         {
             InitializeComponent();
+            clients = new List<string>();
         }
 
-        private void AddClient_Click(object sender, RoutedEventArgs e)
+        private void NewClient_Click(object sender, RoutedEventArgs e)
         {
-            var clientName = ClientNameTextBox.Text;
-            if (!string.IsNullOrWhiteSpace(clientName))
-            {
-                var client = new Client(clientName);
-                bank.AddClient(client);
-                UpdateClientList();
-                ClientNameTextBox.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Имя клиента не может быть пустым.");
-            }
+            // Открываем новое окно для создания клиента
+            NewClientWindow newClientWindow = new NewClientWindow(clients);
+            newClientWindow.ClientAdded += NewClientWindow_ClientAdded;
+            newClientWindow.ShowDialog();
         }
 
-        private void ViewClientDetails_Click(object sender, RoutedEventArgs e)
+        private void NewClientWindow_ClientAdded(object sender, string newClientName)
         {
-            if (ClientsListBox.SelectedItem is Client selectedClient)
+            // Добавляем нового клиента в список
+            clients.Add(newClientName);
+            ClientsListBox.Items.Add(newClientName);
+        }
+
+        private void ClientsListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (ClientsListBox.SelectedItem != null)
             {
-                var clientDetailsWindow = new ClientDetailsWindow(bank, selectedClient);
-                clientDetailsWindow.Show();
-            }
-            else
-            {
-                MessageBox.Show("Выберите клиента из списка.");
+                string selectedClient = ClientsListBox.SelectedItem.ToString();
+                OpenClientDetailsWindow(selectedClient);
             }
         }
 
-        private void UpdateClientList()
+        private void OpenClientDetailsWindow(string clientName)
         {
-            ClientsListBox.Items.Clear();
-            foreach (var client in bank.Clients)
-            {
-                ClientsListBox.Items.Add(client);
-            }
+            ClientDetailsWindow clientDetailsWindow = new ClientDetailsWindow(clientName);
+            clientDetailsWindow.Show();
         }
     }
 }
