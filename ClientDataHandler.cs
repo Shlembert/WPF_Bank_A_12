@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IO;
 
 public static class ClientDataHandler
@@ -8,7 +9,7 @@ public static class ClientDataHandler
     public static void SaveClients(List<Client> clients)
     {
         var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
-        var json = JsonConvert.SerializeObject(clients, Newtonsoft.Json.Formatting.Indented, settings);
+        var json = JsonConvert.SerializeObject(clients, Formatting.Indented, settings);
         File.WriteAllText(filePath, json);
     }
 

@@ -1,20 +1,17 @@
-﻿public abstract class Account
+﻿using System;
+
+public abstract class Account
 {
     public int AccountNumber { get; set; }
     public decimal Balance { get; set; }
-    public string AccountType { get; set; }
     public DateTime CreationDate { get; set; }
 
-    protected Account(int accountNumber, decimal initialBalance, string accountType)
+    protected Account(int accountNumber, decimal initialBalance)
     {
         AccountNumber = accountNumber;
         Balance = initialBalance;
-        AccountType = accountType;
         CreationDate = DateTime.Now;
     }
-
-    // Пустой конструктор для сериализации
-    protected Account() { }
 
     public virtual void Transfer(Account toAccount, decimal amount)
     {
@@ -57,17 +54,11 @@
 public class DepositAccount : Account
 {
     public DepositAccount(int accountNumber, decimal initialBalance)
-        : base(accountNumber, initialBalance, "Депозитный") { }
-
-    // Пустой конструктор для сериализации
-    public DepositAccount() : base() { }
+        : base(accountNumber, initialBalance) { }
 }
 
 public class NonDepositAccount : Account
 {
     public NonDepositAccount(int accountNumber, decimal initialBalance)
-        : base(accountNumber, initialBalance, "Недепозитный") { }
-
-    // Пустой конструктор для сериализации
-    public NonDepositAccount() : base() { }
+        : base(accountNumber, initialBalance) { }
 }

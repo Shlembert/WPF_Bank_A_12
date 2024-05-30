@@ -8,9 +8,6 @@
         Name = name;
     }
 
-    // Пустой конструктор для сериализации
-    public Client() { }
-
     public override string ToString()
     {
         return Name;

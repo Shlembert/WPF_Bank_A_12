@@ -1,49 +1,44 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 
 namespace BankApp
 {
     public partial class ClientDetailsWindow : Window
     {
-        private Client _client;
+        private Client client;
 
         public ClientDetailsWindow(Client client)
         {
             InitializeComponent();
-            _client = client;
-            LoadClientDetails();
-        }
-
-        private void LoadClientDetails()
-        {
-            // Загрузка данных клиента в элементы интерфейса
-            NameTextBlock.Text = _client.Name;
-            AccountsDataGrid.ItemsSource = _client.Accounts;
+            this.client = client;
+            NameTextBlock.Text = client.Name;
+            AccountsDataGrid.ItemsSource = client.Accounts;
         }
 
         private void NewAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика создания нового счета
+            NewAccountWindow newAccountWindow = new NewAccountWindow(client);
+            newAccountWindow.ShowDialog();
+            AccountsDataGrid.Items.Refresh();
         }
 
         private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика удаления счета
+            // Implement account deletion logic
         }
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика перевода средств
+            // Implement transfer logic
         }
 
         private void DepositButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика пополнения счета
+            // Implement deposit logic
         }
 
         private void WithdrawButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика снятия средств
+            // Implement withdrawal logic
         }
     }
 }
