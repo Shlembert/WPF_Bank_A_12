@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Git\WPF_Bank_A_12\App.xaml
-4-1539081167
+6829726633
 
-18-769335199
+20664385442
 1991635303922
-ClientDetailsWindow.xaml;MainWindow.xaml;NewAccountWindow.xaml;NewClientWindow.xaml;
+ClientDetailsWindow.xaml;DepositWithdrawWindow.xaml;MainWindow.xaml;NewAccountWindow.xaml;NewClientWindow.xaml;TransferWindow.xaml;
 
-False
+True
 

@@ -8,9 +8,9 @@
             <RadioButton x:Name="DepositRadioButton" Content="Депозитный" GroupName="AccountType" Margin="0,0,0,5"/>
             <RadioButton x:Name="NonDepositRadioButton" Content="Не депозитный" GroupName="AccountType" Margin="0,0,0,20"/>
 
-            <Button Content="Сгенерировать" Width="150" HorizontalAlignment="Center" Margin="0,0,0,10" Click="GenerateButton_Click"/>
-            
             <TextBox x:Name="AccountNumberTextBox" Width="200" Margin="0,0,0,20" IsReadOnly="True"/>
+
+            <Button Content="Сгенерировать" Width="150" HorizontalAlignment="Center" Margin="0,0,0,10" Click="GenerateButton_Click"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Content="Готово" Width="100" Margin="0,0,10,0" Click="DoneButton_Click"/>

@@ -81,3 +81,7 @@ D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\App.baml
 D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\Wpf_Bank.88073AE4.Up2Date
 D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\NewAccountWindow.baml
 D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\NewAccountWindow.g.cs
+D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\DepositWithdrawWindow.baml
+D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\DepositWithdrawWindow.g.cs
+D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\TransferWindow.g.cs
+D:\Git\WPF_Bank_A_12\obj\Debug\net8.0-windows\TransferWindow.baml

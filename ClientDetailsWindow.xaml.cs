@@ -23,22 +23,42 @@ namespace BankApp
 
         private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement account deletion logic
+            if (AccountsDataGrid.SelectedItem is Account selectedAccount)
+            {
+                client.Accounts.Remove(selectedAccount);
+                ClientDataHandler.SaveClients(MainWindow.Clients);
+                AccountsDataGrid.Items.Refresh();
+
+                MessageBox.Show($"Счет {selectedAccount.AccountNumber} удален.");
+            }
         }
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement transfer logic
+            TransferWindow transferWindow = new TransferWindow(client);
+            transferWindow.ShowDialog();
+            AccountsDataGrid.Items.Refresh();
         }
+
 
         private void DepositButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement deposit logic
+            if (AccountsDataGrid.SelectedItem is Account selectedAccount)
+            {
+                DepositWithdrawWindow depositWindow = new DepositWithdrawWindow(selectedAccount, true);
+                depositWindow.ShowDialog();
+                AccountsDataGrid.Items.Refresh();
+            }
         }
 
         private void WithdrawButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement withdrawal logic
+            if (AccountsDataGrid.SelectedItem is Account selectedAccount)
+            {
+                DepositWithdrawWindow withdrawWindow = new DepositWithdrawWindow(selectedAccount, false);
+                withdrawWindow.ShowDialog();
+                AccountsDataGrid.Items.Refresh();
+            }
         }
     }
 }

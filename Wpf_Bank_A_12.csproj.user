@@ -10,15 +10,24 @@
     <Compile Update="ClientDetailsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="DepositWithdrawWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="NewAccountWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="NewClientWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TransferWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ClientDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DepositWithdrawWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -28,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="NewClientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TransferWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
