@@ -60,7 +60,7 @@ namespace BankApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Wpf_Bank_A_12;V1.0.0.0;component/depositwithdrawwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Wpf_Bank_A_12;component/depositwithdrawwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DepositWithdrawWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

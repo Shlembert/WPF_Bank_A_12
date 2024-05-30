@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
@@ -6,38 +7,26 @@ namespace BankApp
 {
     public partial class TransferWindow : Window
     {
-        private Client currentClient;
+        private Client client;
 
-        public TransferWindow(Client currentClient)
+        public TransferWindow(Client client)
         {
             InitializeComponent();
-            this.currentClient = currentClient;
+            this.client = client;
 
-            // Заполняем комбобокс с клиентами
-            ClientsComboBox.ItemsSource = MainWindow.Clients;
+            // Заполнение комбо-бокса счетами клиента
+            FillAccountsComboBox();
         }
 
-        private void SelfTransferRadioButton_Checked(object sender, RoutedEventArgs e)
+        private void FillAccountsComboBox()
         {
-            // Если выбрано "На свой счет", показываем список счетов текущего клиента
-            AccountsComboBox.ItemsSource = currentClient.Accounts;
-            ClientsComboBox.Visibility = Visibility.Collapsed;
-            AccountsComboBox.Visibility = Visibility.Visible;
-        }
+            // Очистка комбо-бокса перед заполнением
+            AccountsComboBox.Items.Clear();
 
-        private void OtherClientTransferRadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            // Если выбрано "На счет другого клиента", показываем список всех клиентов
-            ClientsComboBox.Visibility = Visibility.Visible;
-            AccountsComboBox.Visibility = Visibility.Collapsed;
-        }
-
-        private void ClientsComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            // При выборе клиента показываем список его счетов
-            if (ClientsComboBox.SelectedItem is Client selectedClient)
+            // Добавление номеров счетов клиента в комбо-бокс
+            foreach (var account in client.Accounts)
             {
-                AccountsComboBox.ItemsSource = selectedClient.Accounts;
+                AccountsComboBox.Items.Add(account.AccountNumber);
             }
         }
 
@@ -45,67 +34,65 @@ namespace BankApp
         {
             if (SelfTransferRadioButton.IsChecked == true)
             {
-                // Перевод на собственный счет
-                if (AccountsComboBox.SelectedItem is Account selectedAccount)
+                // Перевод на свой счет
+                if (AccountsComboBox.SelectedItem != null)
                 {
-                    if (string.IsNullOrEmpty(AmountTextBox.Text))
+                    int selectedAccountNumber = (int)AccountsComboBox.SelectedItem;
+                    Account selectedAccount = client.Accounts.FirstOrDefault(account => account.AccountNumber == selectedAccountNumber);
+                    if (selectedAccount != null)
                     {
-                        MessageBox.Show("Введите сумму операции.");
-                        return;
+                        if (!string.IsNullOrWhiteSpace(AmountTextBox.Text) && decimal.TryParse(AmountTextBox.Text, out decimal amount))
+                        {
+                            // Выполнение перевода на выбранный счет
+                            selectedAccount.Deposit(amount); // Предполагается, что у счета есть метод Deposit для зачисления средств
+                            MessageBox.Show($"Средства успешно переведены на счет {selectedAccountNumber}");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Введите корректную сумму перевода.");
+                        }
                     }
-
-                    decimal amount;
-                    if (!decimal.TryParse(AmountTextBox.Text, out amount))
+                    else
                     {
-                        MessageBox.Show("Введите корректную сумму.");
-                        return;
+                        MessageBox.Show("Выберите счет для перевода.");
                     }
-
-                    selectedAccount.Deposit(amount);
-                    ClientDataHandler.SaveClients(MainWindow.Clients);
-                    MessageBox.Show($"Сумма {amount} переведена на счет {selectedAccount.AccountNumber}.");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Выберите счет для перевода.");
                 }
             }
             else if (OtherClientTransferRadioButton.IsChecked == true)
             {
                 // Перевод на счет другого клиента
-                if (ClientsComboBox.SelectedItem is Client selectedClient && selectedClient.Accounts.Any())
-                {
-                    Account targetAccount = selectedClient.Accounts.First();
-
-                    if (string.IsNullOrEmpty(AmountTextBox.Text))
-                    {
-                        MessageBox.Show("Введите сумму операции.");
-                        return;
-                    }
-
-                    decimal amount;
-                    if (!decimal.TryParse(AmountTextBox.Text, out amount))
-                    {
-                        MessageBox.Show("Введите корректную сумму.");
-                        return;
-                    }
-
-                    targetAccount.Deposit(amount);
-                    ClientDataHandler.SaveClients(MainWindow.Clients);
-                    MessageBox.Show($"Сумма {amount} переведена на счет клиента {selectedClient.Name}.");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Выберите клиента с существующим счетом.");
-                }
+                // Здесь нужно добавить логику для выбора клиента и счета другого клиента
+                // После выбора клиента и счета выполнить перевод средств
+            }
+            else
+            {
+                MessageBox.Show("Выберите тип перевода.");
             }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void SelfTransferRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            // При выборе опции "На свой счет" скрываем комбо-бокс выбора клиента
+            ClientsComboBox.Visibility = Visibility.Collapsed;
+            AccountsComboBox.Visibility = Visibility.Visible;
+
+            // Заполняем комбо-бокс счетами клиента
+            FillAccountsComboBox();
+        }
+
+        private void OtherClientTransferRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            // При выборе опции "На счет другого клиента" скрываем комбо-бокс выбора счета и отображаем комбо-бокс выбора клиента
+            ClientsComboBox.Visibility = Visibility.Visible;
+            AccountsComboBox.Visibility = Visibility.Collapsed;
+
+            // Здесь можно заполнить комбо-бокс списком других клиентов
         }
     }
 }

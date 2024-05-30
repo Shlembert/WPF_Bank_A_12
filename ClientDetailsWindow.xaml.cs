@@ -35,10 +35,18 @@ namespace BankApp
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
-            TransferWindow transferWindow = new TransferWindow(client);
-            transferWindow.ShowDialog();
-            AccountsDataGrid.Items.Refresh();
+            if (client.Accounts.Count == 1)
+            {
+                MessageBox.Show("У вас только один счет. Чтобы сделать перевод, создайте новый счет.");
+            }
+            else
+            {
+                TransferWindow transferWindow = new TransferWindow(client);
+                transferWindow.ShowDialog();
+                AccountsDataGrid.Items.Refresh();
+            }
         }
+
 
 
         private void DepositButton_Click(object sender, RoutedEventArgs e)
