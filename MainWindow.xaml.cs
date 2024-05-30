@@ -5,41 +5,45 @@ namespace BankApp
 {
     public partial class MainWindow : Window
     {
-        private List<string> clients;
+        private List<Client> clients;
 
         public MainWindow()
         {
             InitializeComponent();
-            clients = new List<string>();
+            clients = ClientDataHandler.LoadClients();
+            foreach (var client in clients)
+            {
+                ClientsListBox.Items.Add(client.Name);
+            }
         }
 
         private void NewClient_Click(object sender, RoutedEventArgs e)
         {
-            // Открываем новое окно для создания клиента
-            NewClientWindow newClientWindow = new NewClientWindow(clients);
+            NewClientWindow newClientWindow = new NewClientWindow();
             newClientWindow.ClientAdded += NewClientWindow_ClientAdded;
             newClientWindow.ShowDialog();
         }
 
-        private void NewClientWindow_ClientAdded(object sender, string newClientName)
+        private void NewClientWindow_ClientAdded(object sender, Client newClient)
         {
-            // Добавляем нового клиента в список
-            clients.Add(newClientName);
-            ClientsListBox.Items.Add(newClientName);
+            clients.Add(newClient);
+            ClientsListBox.Items.Add(newClient.Name);
+            ClientDataHandler.SaveClients(clients);
         }
 
         private void ClientsListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (ClientsListBox.SelectedItem != null)
             {
-                string selectedClient = ClientsListBox.SelectedItem.ToString();
+                string selectedClientName = ClientsListBox.SelectedItem.ToString();
+                Client selectedClient = clients.Find(c => c.Name == selectedClientName);
                 OpenClientDetailsWindow(selectedClient);
             }
         }
 
-        private void OpenClientDetailsWindow(string clientName)
+        private void OpenClientDetailsWindow(Client client)
         {
-            ClientDetailsWindow clientDetailsWindow = new ClientDetailsWindow(clientName);
+            ClientDetailsWindow clientDetailsWindow = new ClientDetailsWindow(client);
             clientDetailsWindow.Show();
         }
     }

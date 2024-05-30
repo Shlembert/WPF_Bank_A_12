@@ -1,0 +1,21 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Client, Wpf_Bank_A_12]], System.Private.CoreLib",
+  "$values": [
+    {
+      "$type": "Client, Wpf_Bank_A_12",
+      "Name": "Вася",
+      "Accounts": {
+        "$type": "System.Collections.Generic.List`1[[Account, Wpf_Bank_A_12]], System.Private.CoreLib",
+        "$values": []
+      }
+    },
+    {
+      "$type": "Client, Wpf_Bank_A_12",
+      "Name": "Петя",
+      "Accounts": {
+        "$type": "System.Collections.Generic.List`1[[Account, Wpf_Bank_A_12]], System.Private.CoreLib",
+        "$values": []
+      }
+    }
+  ]
+}

@@ -1,36 +1,33 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace BankApp
 {
     public partial class NewClientWindow : Window
     {
-        public event EventHandler<string> ClientAdded;
-        private List<string> existingClients;
+        // Событие для уведомления о добавлении клиента
+        public event EventHandler<Client> ClientAdded;
 
-        public NewClientWindow(List<string> clients)
+        // Конструктор окна
+        public NewClientWindow()
         {
             InitializeComponent();
-            existingClients = clients;
         }
 
-        private void SaveClient_Click(object sender, RoutedEventArgs e)
+        // Обработчик клика на кнопку добавления клиента
+        private void AddClientButton_Click(object sender, RoutedEventArgs e)
         {
-            // Логика сохранения нового клиента
-            string newClientName = NewClientNameTextBox.Text;
-            if (string.IsNullOrWhiteSpace(newClientName))
+            string clientName = ClientNameTextBox.Text;
+            if (!string.IsNullOrWhiteSpace(clientName))
             {
-                MessageBox.Show("Пожалуйста, введите имя клиента.");
-                return;
+                Client newClient = new Client(clientName);
+                ClientAdded?.Invoke(this, newClient);
+                Close();
             }
-
-            if (existingClients.Contains(newClientName))
+            else
             {
-                MessageBox.Show("Клиент с таким именем уже существует. Пожалуйста, выберите другое имя.");
-                return;
+                MessageBox.Show("Имя клиента не может быть пустым.");
             }
-
-            ClientAdded?.Invoke(this, newClientName);
-            this.Close();
         }
     }
 }
