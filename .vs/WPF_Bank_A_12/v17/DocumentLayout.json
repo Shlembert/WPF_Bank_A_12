@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\GitHub\\WPF_Bank_A_12\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\transferwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:transferwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\transferwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:transferwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\newaccountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:newaccountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\depositwithdrawwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:depositwithdrawwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\newaccountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:newaccountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\clientdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:clientdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\transferwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:transferwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\depositwithdrawwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:depositwithdrawwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\transferwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:transferwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\depositwithdrawwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -25,18 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\clientdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:clientdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\newaccountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:newaccountwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\newaccountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:newaccountwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\newclientwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\accounttypeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:accounttypeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|d:\\github\\wpf_bank_a_12\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F0CBBEA-5DE5-461E-B974-8B6280F4238F}|Wpf_Bank_A_12.csproj|solutionrelative:bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,11 +82,112 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepositWithdrawWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\DepositWithdrawWindow.xaml.cs",
+              "RelativeDocumentMoniker": "DepositWithdrawWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\DepositWithdrawWindow.xaml.cs",
+              "RelativeToolTip": "DepositWithdrawWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:29:50.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TransferWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\TransferWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TransferWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\TransferWindow.xaml.cs",
+              "RelativeToolTip": "TransferWindow.xaml.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwGQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T17:45:20.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewAccountWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml.cs",
+              "RelativeDocumentMoniker": "NewAccountWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml.cs",
+              "RelativeToolTip": "NewAccountWindow.xaml.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T16:47:53.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bank.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\Bank.cs",
+              "RelativeDocumentMoniker": "Bank.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\Bank.cs",
+              "RelativeToolTip": "Bank.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T17:29:54.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewAccountWindow.xaml",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml",
+              "RelativeDocumentMoniker": "NewAccountWindow.xaml",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml",
+              "RelativeToolTip": "NewAccountWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-30T16:39:56.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientDetailsWindow.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClientDetailsWindow.xaml.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml.cs",
+              "RelativeToolTip": "ClientDetailsWindow.xaml.cs",
+              "ViewState": "AQIAADYAAACAMzMzMzMLwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T18:20:28.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\Account.cs",
+              "RelativeDocumentMoniker": "Account.cs",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\Account.cs",
+              "RelativeToolTip": "Account.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAkwCwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T08:38:44.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientDetailsWindow.xaml",
+              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml",
+              "RelativeDocumentMoniker": "ClientDetailsWindow.xaml",
+              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml",
+              "RelativeToolTip": "ClientDetailsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-29T17:52:59.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "TransferWindow.xaml",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\TransferWindow.xaml",
               "RelativeDocumentMoniker": "TransferWindow.xaml",
@@ -98,57 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DepositWithdrawWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\DepositWithdrawWindow.xaml.cs",
-              "RelativeDocumentMoniker": "DepositWithdrawWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\DepositWithdrawWindow.xaml.cs",
-              "RelativeToolTip": "DepositWithdrawWindow.xaml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAYwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:29:50.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientDetailsWindow.xaml",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "ClientDetailsWindow.xaml",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml",
-              "RelativeToolTip": "ClientDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-29T17:52:59.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TransferWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\TransferWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TransferWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\TransferWindow.xaml.cs",
-              "RelativeToolTip": "TransferWindow.xaml.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAkwG8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T17:45:20.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClientDetailsWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ClientDetailsWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\ClientDetailsWindow.xaml.cs",
-              "RelativeToolTip": "ClientDetailsWindow.xaml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAYwDcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T18:20:28.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "DepositWithdrawWindow.xaml",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\DepositWithdrawWindow.xaml",
               "RelativeDocumentMoniker": "DepositWithdrawWindow.xaml",
@@ -159,19 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\Account.cs",
-              "RelativeDocumentMoniker": "Account.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\Account.cs",
-              "RelativeToolTip": "Account.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAkwCwAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:38:44.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "NewClientWindow.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewClientWindow.xaml.cs",
               "RelativeDocumentMoniker": "NewClientWindow.xaml.cs",
@@ -183,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ClientDataHandler.cs",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\ClientDataHandler.cs",
               "RelativeDocumentMoniker": "ClientDataHandler.cs",
@@ -195,30 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NewAccountWindow.xaml",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml",
-              "RelativeDocumentMoniker": "NewAccountWindow.xaml",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml",
-              "RelativeToolTip": "NewAccountWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-30T16:39:56.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NewAccountWindow.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml.cs",
-              "RelativeDocumentMoniker": "NewAccountWindow.xaml.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\NewAccountWindow.xaml.cs",
-              "RelativeToolTip": "NewAccountWindow.xaml.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwDoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T16:47:53.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -230,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -242,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\Client.cs",
               "RelativeDocumentMoniker": "Client.cs",
@@ -254,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -265,19 +281,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "NewClientWindow.xaml",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\NewClientWindow.xaml",
               "RelativeDocumentMoniker": "NewClientWindow.xaml",
               "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\NewClientWindow.xaml",
               "RelativeToolTip": "NewClientWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-29T17:28:14.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T17:28:14.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AccountTypeConverter.cs",
               "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\AccountTypeConverter.cs",
               "RelativeDocumentMoniker": "AccountTypeConverter.cs",
@@ -286,18 +301,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T09:44:14.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Bank.cs",
-              "DocumentMoniker": "D:\\GitHub\\WPF_Bank_A_12\\Bank.cs",
-              "RelativeDocumentMoniker": "Bank.cs",
-              "ToolTip": "D:\\GitHub\\WPF_Bank_A_12\\Bank.cs",
-              "RelativeToolTip": "Bank.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T17:29:54.953Z"
             }
           ]
         }

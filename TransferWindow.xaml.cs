@@ -35,8 +35,26 @@ namespace BankApp
             }
         }
 
+        private void FillClientsComboBox()
+        {
+            // Очистка комбо-бокса перед заполнением
+            ClientsComboBox.Items.Clear();
+
+            // Добавление других клиентов в комбо-бокс
+            foreach (var otherClient in MainWindow.Clients.Where(c => c != client))
+            {
+                ClientsComboBox.Items.Add(otherClient);
+            }
+        }
+
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!decimal.TryParse(AmountTextBox.Text, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Введите корректную положительную сумму перевода.");
+                return;
+            }
+
             if (SelfTransferRadioButton.IsChecked == true)
             {
                 // Перевод на свой счет
@@ -46,24 +64,17 @@ namespace BankApp
                     Account selectedAccount = client.Accounts.FirstOrDefault(account => account.AccountNumber == selectedAccountNumber);
                     if (selectedAccount != null)
                     {
-                        if (!string.IsNullOrWhiteSpace(AmountTextBox.Text) && decimal.TryParse(AmountTextBox.Text, out decimal amount) && amount > 0)
+                        if (sourceAccount.Balance >= amount)
                         {
-                            if (sourceAccount.Balance >= amount)
-                            {
-                                sourceAccount.Withdraw(amount);
-                                selectedAccount.Deposit(amount);
-                                MessageBox.Show($"Средства успешно переведены на счет {selectedAccountNumber}");
-                                ClientDataHandler.SaveClients(MainWindow.Clients);
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Недостаточно средств на счете для перевода.");
-                            }
+                            sourceAccount.Withdraw(amount);
+                            selectedAccount.Deposit(amount);
+                            MessageBox.Show($"Средства успешно переведены на счет {selectedAccountNumber}");
+                            ClientDataHandler.SaveClients(MainWindow.Clients);
+                            this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Введите корректную положительную сумму перевода.");
+                            MessageBox.Show("Недостаточно средств на счете для перевода.");
                         }
                     }
                     else
@@ -75,13 +86,55 @@ namespace BankApp
             else if (OtherClientTransferRadioButton.IsChecked == true)
             {
                 // Перевод на счет другого клиента
-                // Здесь нужно добавить логику для выбора клиента и счета другого клиента
-                // После выбора клиента и счета выполнить перевод средств
+                if (ClientsComboBox.SelectedItem is Client selectedClient)
+                {
+                    Account destinationAccount = selectedClient.Accounts.FirstOrDefault();
+
+                    if (sourceAccount.Balance >= amount)
+                    {
+                        sourceAccount.Withdraw(amount);
+
+                        if (destinationAccount == null)
+                        {
+                            // Создание нового счета, если у клиента нет счетов
+                            destinationAccount = new DepositAccount(int.Parse(GenerateNewAccountNumber()), amount) { CreationDate = DateTime.Now };
+                            selectedClient.Accounts.Add(destinationAccount);
+                        }
+                        else
+                        {
+                            // Пополнение первого счета, если счета уже существуют
+                            destinationAccount.Deposit(amount);
+                        }
+
+                        MessageBox.Show($"Средства успешно переведены на счет клиента {selectedClient.Name}");
+                        ClientDataHandler.SaveClients(MainWindow.Clients);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Недостаточно средств на счете для перевода.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Выберите клиента для перевода.");
+                }
             }
             else
             {
                 MessageBox.Show("Выберите тип перевода.");
             }
+        }
+
+        private string GenerateNewAccountNumber()
+        {
+            Random rand = new Random();
+            int accountNumber;
+            do
+            {
+                accountNumber = rand.Next(100000000, 999999999);
+            } while (MainWindow.Clients.SelectMany(c => c.Accounts).Any(a => a.AccountNumber == accountNumber));
+            return accountNumber.ToString(); // Преобразование числа в строку
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -105,7 +158,8 @@ namespace BankApp
             ClientsComboBox.Visibility = Visibility.Visible;
             AccountsComboBox.Visibility = Visibility.Collapsed;
 
-            // Здесь можно заполнить комбо-бокс списком других клиентов
+            // Заполняем комбо-бокс другими клиентами
+            FillClientsComboBox();
         }
     }
 }

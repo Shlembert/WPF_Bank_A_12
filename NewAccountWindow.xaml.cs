@@ -13,10 +13,15 @@ namespace BankApp
             this.client = client;
         }
 
-        private void GenerateButton_Click(object sender, RoutedEventArgs e)
+        private string GenerateAccountNumber()
         {
             Random random = new Random();
-            string accountNumber = random.Next(100000000, 999999999).ToString();
+            return random.Next(100000000, 999999999).ToString(); // Преобразование числа в строку
+        }
+
+        private void GenerateButton_Click(object sender, RoutedEventArgs e)
+        {
+            string accountNumber = GenerateAccountNumber();
             AccountNumberTextBox.Text = accountNumber;
         }
 
@@ -28,16 +33,16 @@ namespace BankApp
                 return;
             }
 
-            int accountNumber = int.Parse(AccountNumberTextBox.Text.Replace(" ", ""));
-            Account newAccount;
+            string accountNumber = AccountNumberTextBox.Text.Replace(" ", "");
+            decimal initialBalance = 0;
 
             if (DepositRadioButton.IsChecked == true)
             {
-                newAccount = new DepositAccount(accountNumber, 0);
+                client.Accounts.Add(new DepositAccount(int.Parse(accountNumber), initialBalance));
             }
             else if (NonDepositRadioButton.IsChecked == true)
             {
-                newAccount = new NonDepositAccount(accountNumber, 0);
+                client.Accounts.Add(new NonDepositAccount(int.Parse(accountNumber), initialBalance));
             }
             else
             {
@@ -45,7 +50,6 @@ namespace BankApp
                 return;
             }
 
-            client.Accounts.Add(newAccount);
             ClientDataHandler.SaveClients(MainWindow.Clients);
             this.Close();
         }
