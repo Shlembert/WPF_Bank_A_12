@@ -35,27 +35,29 @@ namespace BankApp
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
-            if (client.Accounts.Count == 1)
-            {
-                MessageBox.Show("У вас только один счет. Чтобы сделать перевод, создайте новый счет.");
-            }
-            else
-            {
-                TransferWindow transferWindow = new TransferWindow(client);
-                transferWindow.ShowDialog();
-                AccountsDataGrid.Items.Refresh();
-            }
+            TransferWindow transferWindow = new TransferWindow(client);
+            transferWindow.ShowDialog();
+            AccountsDataGrid.Items.Refresh();
         }
-
-
 
         private void DepositButton_Click(object sender, RoutedEventArgs e)
         {
             if (AccountsDataGrid.SelectedItem is Account selectedAccount)
             {
-                DepositWithdrawWindow depositWindow = new DepositWithdrawWindow(selectedAccount, true);
-                depositWindow.ShowDialog();
-                AccountsDataGrid.Items.Refresh();
+                try
+                {
+                    DepositWithdrawWindow depositWindow = new DepositWithdrawWindow(selectedAccount, true);
+                    depositWindow.ShowDialog();
+                    AccountsDataGrid.Items.Refresh();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для пополнения.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -63,9 +65,20 @@ namespace BankApp
         {
             if (AccountsDataGrid.SelectedItem is Account selectedAccount)
             {
-                DepositWithdrawWindow withdrawWindow = new DepositWithdrawWindow(selectedAccount, false);
-                withdrawWindow.ShowDialog();
-                AccountsDataGrid.Items.Refresh();
+                try
+                {
+                    DepositWithdrawWindow withdrawWindow = new DepositWithdrawWindow(selectedAccount, false);
+                    withdrawWindow.ShowDialog();
+                    AccountsDataGrid.Items.Refresh();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для списания средств.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

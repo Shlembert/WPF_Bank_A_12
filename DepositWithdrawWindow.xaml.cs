@@ -22,24 +22,30 @@ namespace BankApp
                 return;
             }
 
-            decimal amount;
-            if (!decimal.TryParse(AmountTextBox.Text, out amount))
+            if (!decimal.TryParse(AmountTextBox.Text, out decimal amount) || amount <= 0)
             {
-                MessageBox.Show("Введите корректную сумму.");
+                MessageBox.Show("Введите корректную положительную сумму.");
                 return;
             }
 
-            if (isDeposit)
+            try
             {
-                account.Deposit(amount);
-            }
-            else
-            {
-                account.Withdraw(amount);
-            }
+                if (isDeposit)
+                {
+                    account.Deposit(amount);
+                }
+                else
+                {
+                    account.Withdraw(amount);
+                }
 
-            ClientDataHandler.SaveClients(MainWindow.Clients);
-            this.Close();
+                ClientDataHandler.SaveClients(MainWindow.Clients);
+                this.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
