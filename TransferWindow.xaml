@@ -4,6 +4,7 @@
         Title="Перевод средств" Height="300" Width="400">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+            <TextBlock x:Name="SourceAccountTextBlock" FontWeight="Bold" Visibility="Collapsed" Margin="0,0,0,5"/>
             <RadioButton x:Name="SelfTransferRadioButton" Content="На свой счет" GroupName="TransferType" Margin="0,0,0,5" Checked="SelfTransferRadioButton_Checked"/>
             <RadioButton x:Name="OtherClientTransferRadioButton" Content="На счет другого клиента" GroupName="TransferType" Margin="0,0,0,10" Checked="OtherClientTransferRadioButton_Checked"/>
             <ComboBox x:Name="ClientsComboBox" Width="200" Margin="0,0,0,5" Visibility="Collapsed"/>
@@ -17,4 +18,3 @@
         </StackPanel>
     </Grid>
 </Window>
-

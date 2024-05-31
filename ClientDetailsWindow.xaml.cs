@@ -35,10 +35,25 @@ namespace BankApp
 
         private void TransferButton_Click(object sender, RoutedEventArgs e)
         {
-            TransferWindow transferWindow = new TransferWindow(client);
-            transferWindow.ShowDialog();
-            AccountsDataGrid.Items.Refresh();
+            if (AccountsDataGrid.SelectedItem is Account selectedAccount)
+            {
+                if (selectedAccount.Balance > 0)
+                {
+                    TransferWindow transferWindow = new TransferWindow(client, selectedAccount);
+                    transferWindow.ShowDialog();
+                    AccountsDataGrid.Items.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("На выбранном счете недостаточно средств для перевода.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для перевода.");
+            }
         }
+
 
         private void DepositButton_Click(object sender, RoutedEventArgs e)
         {

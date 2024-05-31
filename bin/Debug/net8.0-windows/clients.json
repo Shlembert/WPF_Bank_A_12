@@ -10,13 +10,13 @@
           {
             "$type": "DepositAccount, Wpf_Bank_A_12",
             "AccountNumber": 989739008,
-            "Balance": 150.0,
+            "Balance": 100.0,
             "CreationDate": "2024-05-30T20:31:04.4932862+03:00"
           },
           {
             "$type": "DepositAccount, Wpf_Bank_A_12",
             "AccountNumber": 465924130,
-            "Balance": 0.0,
+            "Balance": 50.0,
             "CreationDate": "2024-05-30T21:38:15.1960401+03:00"
           }
         ]

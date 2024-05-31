@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
@@ -8,11 +7,17 @@ namespace BankApp
     public partial class TransferWindow : Window
     {
         private Client client;
+        private Account sourceAccount;
 
-        public TransferWindow(Client client)
+        public TransferWindow(Client client, Account sourceAccount)
         {
             InitializeComponent();
             this.client = client;
+            this.sourceAccount = sourceAccount;
+
+            // Установка текста TextBlock для выбранного счета
+            SourceAccountTextBlock.Text = $"Счет списания: {sourceAccount.AccountNumber}";
+            SourceAccountTextBlock.Visibility = Visibility.Visible;
 
             // Заполнение комбо-бокса счетами клиента
             FillAccountsComboBox();
@@ -23,8 +28,8 @@ namespace BankApp
             // Очистка комбо-бокса перед заполнением
             AccountsComboBox.Items.Clear();
 
-            // Добавление номеров счетов клиента в комбо-бокс
-            foreach (var account in client.Accounts)
+            // Добавление номеров счетов клиента в комбо-бокс, исключая выбранный для списания
+            foreach (var account in client.Accounts.Where(a => a.AccountNumber != sourceAccount.AccountNumber))
             {
                 AccountsComboBox.Items.Add(account.AccountNumber);
             }
@@ -41,16 +46,24 @@ namespace BankApp
                     Account selectedAccount = client.Accounts.FirstOrDefault(account => account.AccountNumber == selectedAccountNumber);
                     if (selectedAccount != null)
                     {
-                        if (!string.IsNullOrWhiteSpace(AmountTextBox.Text) && decimal.TryParse(AmountTextBox.Text, out decimal amount))
+                        if (!string.IsNullOrWhiteSpace(AmountTextBox.Text) && decimal.TryParse(AmountTextBox.Text, out decimal amount) && amount > 0)
                         {
-                            // Выполнение перевода на выбранный счет
-                            selectedAccount.Deposit(amount); // Предполагается, что у счета есть метод Deposit для зачисления средств
-                            MessageBox.Show($"Средства успешно переведены на счет {selectedAccountNumber}");
-                            this.Close();
+                            if (sourceAccount.Balance >= amount)
+                            {
+                                sourceAccount.Withdraw(amount);
+                                selectedAccount.Deposit(amount);
+                                MessageBox.Show($"Средства успешно переведены на счет {selectedAccountNumber}");
+                                ClientDataHandler.SaveClients(MainWindow.Clients);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Недостаточно средств на счете для перевода.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Введите корректную сумму перевода.");
+                            MessageBox.Show("Введите корректную положительную сумму перевода.");
                         }
                     }
                     else
